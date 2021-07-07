@@ -2,4 +2,4 @@
 
 DATA="$(jq -r .data)"
 
-echo $DATA | sha1sum -c -
+echo $DATA | sha1sum | cut -d " " -f1
