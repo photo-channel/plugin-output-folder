@@ -1,3 +1,5 @@
 #!/bin/bash
 
-jq -r .source
+DATA="$(jq -r .data)"
+
+echo $DATA | sha1sum -c -
